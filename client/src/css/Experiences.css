@@ -1,0 +1,228 @@
+/* Setting the lines */
+
+.horizontal-line {
+  width: 5px;
+  height: 90px;
+  content: "";
+  background-color: #dedede;
+  position: absolute;
+  transform: rotate(90deg);
+  top: 2rem;
+  left: 2rem;
+}
+
+.experiences-items {
+  margin-left: 2rem;
+  position: relative;
+}
+
+.experiences-items::before {
+  width: 5px;
+  height: 80%;
+  content: "";
+  position: absolute;
+  margin-right: 10px;
+  background-color: #dedede;
+}
+
+.experience-item::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  content: "";
+  background-color: #dedede;
+  position: absolute;
+  transform: translateX(-40%);
+}
+
+.experience-item-content::before {
+  width: 5px;
+  height: 55px;
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  margin-right: 10px;
+  background-color: #dedede;
+  transform: rotate(90deg);
+}
+
+/* Setting the Page Elements */
+
+.experiences {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: flex-start;
+}
+
+.experiences-text {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.experience-item {
+  list-style: none;
+  height: auto;
+  position: relative;
+}
+
+.experience-item-content {
+  margin: 50px;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 60vw;
+  background-color: #dedede;
+  color: #000;
+  border-radius: 3px;
+}
+
+.experience-item-content-title {
+  width: 70%;
+  padding: 2%;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.experience-item-content-date {
+  width: 30%;
+  line-height: 25px;
+  background-color: #000;
+  color: #dedede;
+  font-weight: bold;
+  padding: 2%;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.experience-item-content-company {
+  line-height: 33px;
+  font-weight: bold;
+  padding: 2%;
+  width: 70%;
+}
+
+.experience-item-content-place {
+  width: 30%;
+  line-height: 25px;
+  font-weight: bold;
+  padding: 2%;
+  text-align: center;
+}
+
+.experience-item-content-tasks ul {
+  list-style: disc;
+  line-height: 40px;
+  padding-left: 40px;
+}
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+  .experience-item-content {
+    width: 70vw;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 992px) {
+  .horizontal-line {
+    left: 50%;
+  }
+
+  .experiences {
+    width: 90vw;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    z-index: -1;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+
+  .experience-item-content::before {
+    display: none;
+  }
+
+  .experiences-items::before {
+    left: 50%;
+  }
+
+  .experiences-text-title {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .experiences {
+    width: 90vw;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+  }
+
+  .experiences-text-title {
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  .experience-item-content {
+    padding: 3px;
+    width: 90vw;
+    font-size: 12px;
+    margin: 60px auto;
+  }
+
+  .experience-item-content-title {
+    width: 55%;
+    padding: 3%;
+    line-height: 10px;
+  }
+
+  .experience-item-content-date {
+    width: 45%;
+    line-height: 10px;
+    padding: 2% 1%;
+  }
+
+  .experience-item-content-company {
+    line-height: 10px;
+    padding: 3%;
+    width: 65%;
+  }
+
+  .experience-item-content-place {
+    width: 33%;
+    line-height: 10px;
+    padding: 3%;
+  }
+
+  .experience-item-content-tasks ul {
+    list-style: disc;
+    line-height: 30px;
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .experiences-items {
+    margin-left: 0;
+    width: 100%;
+  }
+  .experiences-item {
+    width: 100%;
+  }
+  .experience-item-content {
+    margin: 2rem 0;
+    padding: 5px;
+    width: 100%;
+    font-size: 14px;
+
+  }
+  .experience-item-content-place{
+    width: 35%;
+  }
+}

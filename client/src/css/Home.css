@@ -1,0 +1,165 @@
+/* Setting the page-home Elements */
+
+.main-image {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.main-image img {
+  width: 30vw;
+  height: 30vw;
+  margin: 0 20%;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 50%;
+  transform: rotate(1.3deg);
+  object-fit: cover;
+  object-position: center;
+}
+
+.main-text-name {
+  width: 35vw;
+  margin: 20px 0;
+  font-size: 1.3rem;
+}
+
+.main-text-name h1 {
+  font-size: 2rem;
+}
+
+.main-text-description {
+  width: 35vw;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.main-text-email {
+  color: #dedede;
+  display: flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 48px;
+  width: max-content;
+  height: max-content;
+  background: #292929;
+  border-radius: 4px;
+  margin-top: 100px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.main-text-email svg {
+  margin-right: 1rem;
+}
+
+.main-text-email img {
+  margin-right: 10px;
+  color: #dedede;
+}
+
+.main-text-icons {
+  display: none;
+}
+
+.main-text-email:hover,
+.main-text-email:hover img,
+.main-text-email:hover a {
+  background: #dedede;
+  color: #000;
+}
+
+/* Media queries */
+
+@media (max-width: 1200px) {
+  .main-text-name {
+    width: 40vw;
+    /* font-size: 1.2rem; */
+  }
+  .main-text-description {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-image img {
+    /* width: 50vw; */
+    /* margin: 20%; */
+    border-radius: 50%;
+    align-self: center;
+  }
+
+  .main-text-name {
+    width: 95%;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .main-text-description {
+    text-align: center;
+    width: 95%;
+    /* font-size: 1.9em; */
+  }
+
+  .main-text-email {
+    font-size: 1rem;
+    margin: 10% auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-image img {
+    /* width: 40vw; */
+    align-self: center;
+  }
+
+  .main-text-name {
+    font-size: 1.6em;
+  }
+
+  .main-text-description {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image img {
+    width: 60vw;
+    height: 60vw;
+  }
+
+  .main-text {
+    width: 100%;
+    height: min-content;
+  }
+
+  .main-text-description {
+    display: none;
+  }
+
+  .main-text-email {
+    display: none;
+  }
+
+  .main-text-icons {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .main-text-icons span {
+    width: 33%;
+    margin: 3% auto;
+  }
+
+  .main-text-icons span img {
+    width: 35%;
+  }
+}

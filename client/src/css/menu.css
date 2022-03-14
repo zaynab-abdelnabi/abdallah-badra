@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+.navbar {
+  position: fixed;
+}
+
+header {
+  width: 100vw;
+  padding: 1rem;
+  background-color: #202020;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.sidenav {
+  width: 100vw;
+  background-color: #202020;
+  position: absolute;
+  top: -400%;
+  z-index: -1;
+  transition: all 0.7s;
+}
+
+.sidenav.active {
+  left: 0;
+  top: 100%;
+}
+
+.sidenav ul li a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  display: block;
+  padding: 15px;
+}
+
+.main-menu_nav li:first-child a {
+  border-top: 1px solid #e2e2e2;
+}
+
+.main-menu_nav a {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #e2e2e2;
+  transition: color 0.3s, background-color 0.3s;
+  text-decoration: none;
+  color: white;
+}
+
+.main-menu_nav a:hover,
+.main-menu_nav a:focus {
+  background-color: rgb(195, 195, 195);
+  color: #0b0b0b;
+}
+.main-menu_icons {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+header svg {
+  font-size: 30px;
+  margin-right: 20px;
+  color: #fff !important;
+}
+
+.navbar-icon {
+  font-size: 30;
+  text-shadow: "2px 2px 4px #000000";
+}
+
+.github:hover {
+  color: #333;
+}
+
+.linkedIn:hover {
+  color: #0077b5;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+}
+
+.facebook:hover {
+  color: #4267b2;
+}
+
+.main-menu_icons a {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  color: #e2e2e2;
+}
+
+.main-menu_icons a svg {
+  margin-top: 1rem;
+}
+
+.portfolio-sidenav {
+  width: 100%;
+}
+.portfolio-sidenav ul {
+  list-style: none;
+}
+
+.navbar header {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .sidenav {
+    left: 0;
+    top: 100%;
+    width: 12vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-menu_icons {
+    display: none;
+  }
+  .navbar header {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
